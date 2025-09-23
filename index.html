@@ -68,9 +68,9 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            max-width: 90%;
-            max-height: 90vh;
-            margin: 2% auto;
+            max-width: 95%;
+            max-height: 95vh;
+            margin: 2.5% auto;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         
@@ -171,6 +171,195 @@
         .card-hover:hover .icon-glow {
             filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8));
         }
+        
+        .certificate-image-container {
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .certificate-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .certificate-detail-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .contact-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .contact-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+        }
+        
+        .whatsapp-button:hover {
+            background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .facebook-button {
+            background: linear-gradient(135deg, #4267B2 0%, #1877F2 100%);
+            color: white;
+        }
+        
+        .facebook-button:hover {
+            background: linear-gradient(135deg, #1877F2 0%, #4267B2 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(66, 103, 178, 0.3);
+        }
+        
+        .phone-button {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+        
+        .phone-button:hover {
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .email-button {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+        
+        .email-button:hover {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .contact-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-button:hover .contact-icon {
+            transform: scale(1.2);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .ai-project {
+            background: linear-gradient(135deg, #e6f7ff 0%, #bae7ff 100%);
+        }
+        
+        .python-project {
+            background: linear-gradient(135deg, #fff7e6 0%, #ffd591 100%);
+        }
+        
+        .web-design-project {
+            background: linear-gradient(135deg, #f9f0ff 0%, #efdbff 100%);
+        }
+        
+        /* Custom styles for AI and Python project images */
+        .project-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-image-container:hover .project-image {
+            transform: scale(1.05);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-image-container:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        /* Profile image styling */
+        .profile-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Web design project icon */
+        .web-design-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        .web-design-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -178,26 +367,17 @@
     <header class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-12 px-4 shadow-xl">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="text-center md:text-right mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-2">امام السيد علي حفني </h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">امام السيد علي</h1>
                 <p class="text-xl md:text-2xl opacity-90">مطور برمجيات </p>
-                <div class="mt-6 flex justify-center md:justify-end space-x-4">
-                    <a href="#" class="text-white hover:text-purple-200 transition transform hover:scale-110">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-purple-200 transition transform hover:scale-110">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-purple-200 transition transform hover:scale-110">
-                        <i class="fab fa-twitter text-2xl"></i>
-                    </a>
-                </div>
             </div>
             <div class="relative">
-                <img src="https://z-cdn-media.chatglm.cn/files/caebf657-aa76-42bf-a0c2-ade441092e51_b40697d7-9be5-4497-8bb4-6dc0a2e98e74.jpg?auth_key=1790067210-50931f4fe124463ca1d5cc2a086526de-0-471e542621864d680ad0c7c836e34f4c" 
-                     alt="صورة شخصية" 
-                     class="w-48 h-48 rounded-full profile-image">
+                <div class="profile-image-container w-64 h-64">
+                    <img src="https://z-cdn-media.chatglm.cn/files/caebf657-aa76-42bf-a0c2-ade441092e51_b40697d7-9be5-4497-8bb4-6dc0a2e98e74.jpg?auth_key=1790067210-50931f4fe124463ca1d5cc2a086526de-0-471e542621864d680ad0c7c836e34f4c" 
+                         alt="صورة شخصية" 
+                         class="profile-image">
+                </div>
                 <div class="absolute -bottom-2 -left-2 bg-yellow-400 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                    متاح للعمل بدوام كامل / عن بعد
+                     متاح للعمل بدوام كامل / عن بعد
                 </div>
             </div>
         </div>
@@ -241,14 +421,36 @@
                 </div>
             </div>
 
-            <!-- Projects Card -->
-            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="openModal('projectsModal')">
-                <div class="icon-container bg-gradient-to-br from-orange-500 to-red-600 h-32 flex items-center justify-center">
-                    <i class="fas fa-flask text-white text-5xl icon-glow"></i>
+            <!-- AI Projects Card -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="openModal('aiProjectsModal')">
+                <div class="icon-container bg-gradient-to-br from-blue-500 to-cyan-600 h-32 flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-5xl icon-glow"></i>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">المشاريع</h3>
-                    <p class="text-gray-600">المشاريع العلمية والتطبيقية</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">مشاريع الذكاء الاصطناعي</h3>
+                    <p class="text-gray-600">تطبيقات الذكاء الاصطناعي المتقدمة</p>
+                </div>
+            </div>
+
+            <!-- Python Projects Card -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="openModal('pythonProjectsModal')">
+                <div class="icon-container bg-gradient-to-br from-yellow-500 to-amber-600 h-32 flex items-center justify-center">
+                    <i class="fab fa-python text-white text-5xl icon-glow"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">مشاريع بايثون</h3>
+                    <p class="text-gray-600">تطبيقات بايثون المتقدمة</p>
+                </div>
+            </div>
+
+            <!-- Web Design Projects Card -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="openModal('webDesignProjectsModal')">
+                <div class="icon-container bg-gradient-to-br from-pink-500 to-rose-600 h-32 flex items-center justify-center">
+                    <i class="fas fa-palette text-white text-5xl icon-glow"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">تصميمات الويب</h3>
+                    <p class="text-gray-600">تصاميم ويب مبتكرة وجذابة</p>
                 </div>
             </div>
 
@@ -265,12 +467,12 @@
 
             <!-- Contact Card -->
             <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="openModal('contactModal')">
-                <div class="icon-container bg-gradient-to-br from-pink-500 to-rose-600 h-32 flex items-center justify-center">
-                    <i class="fas fa-envelope text-white text-5xl icon-glow"></i>
+                <div class="icon-container bg-gradient-to-br from-green-500 to-teal-600 h-32 flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-white text-5xl icon-glow"></i>
                 </div>
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-gray-800 mb-2">تواصل معي</h3>
-                    <p class="text-gray-600">اتصل بي مباشرة</p>
+                    <p class="text-gray-600">تواصل معي مباشرة عبر الواتساب</p>
                 </div>
             </div>
         </div>
@@ -279,9 +481,10 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-16">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2023 جميع الحقوق محفوظة</p>
+            <p>&copy; 2024 جميع الحقوق محفوظة</p>
         </div>
     </footer>
+
     <!-- Modals -->
     <!-- About Modal -->
     <div id="aboutModal" class="modal">
@@ -292,14 +495,15 @@
             </div>
             <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
                 <div class="flex flex-col md:flex-row gap-8">
-                    <img src="https://z-cdn-media.chatglm.cn/files/caebf657-aa76-42bf-a0c2-ade441092e51_b40697d7-9be5-4497-8bb4-6dc0a2e98e74.jpg?auth_key=1790067210-50931f4fe124463ca1d5cc2a086526de-0-471e542621864d680ad0c7c836e34f4c" 
-                         alt="صورة شخصية" 
-                         class="w-48 h-48 rounded-full mx-auto md:mx-0 shadow-lg">
+                    <div class="profile-image-container w-48 h-48 mx-auto md:mx-0">
+                        <img src="https://z-cdn-media.chatglm.cn/files/caebf657-aa76-42bf-a0c2-ade441092e51_b40697d7-9be5-4497-8bb4-6dc0a2e98e74.jpg?auth_key=1790067210-50931f4fe124463ca1d5cc2a086526de-0-471e542621864d680ad0c7c836e34f4c" 
+                             alt="صورة شخصية" 
+                             class="profile-image">
+                    </div>
                     <div>
                         <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                            
-                           أنا مطور برمجيات شغوف بالتقنيات الحديثة وأملك خبرة في التعلم الالي والتعلم العميق  ومطور مواقع ويب .
-                           أركز على تقديم حلول مبتكرة وسهلة الاستخدام تلبي احتياجات العملاء وتحسن تجربة المستخدم
+                  أنا مطور برمجيات شغوف بالتقنيات الحديثة وأملك خبرة في التعلم الالي والتعلم العميق ومطور مواقع ويب.
+                            أركز على تقديم حلول مبتكرة وسهلة الاستخدام تلبي احتياجات العملاء وتحسن تجربة المستخدم.
                         </p>
                         <p class="text-gray-700 text-lg leading-relaxed">
                             أؤمن بأن الجودة والتطوير المستمر هو مفتاح النجاح في عالم التكنولوجيا، ولذلك أحرص على متابعة أحدث التقنيات
@@ -309,21 +513,21 @@
                             <div class="text-center bg-purple-50 p-4 rounded-lg">
                                 <i class="fas fa-code text-3xl text-purple-600 mb-2"></i>
                                 <p class="text-gray-700 font-semibold"></p>
-                                <p class="text-gray-600">خبرة</p>
+                                <p class="text-gray-600"></p>
                             </div>
                             <div class="text-center bg-blue-50 p-4 rounded-lg">
                                 <i class="fas fa-project-diagram text-3xl text-blue-600 mb-2"></i>
-                                <p class="text-gray-700 font-semibold">4+</p>
+                                <p class="text-gray-700 font-semibold">12+</p>
                                 <p class="text-gray-600">مشروع مكتمل</p>
                             </div>
                             <div class="text-center bg-green-50 p-4 rounded-lg">
                                 <i class="fas fa-users text-3xl text-green-600 mb-2"></i>
-                                <p class="text-gray-700 font-semibold">5+</p>
+                                <p class="text-gray-700 font-semibold">7+</p>
                                 <p class="text-gray-600">عميل راضٍ</p>
                             </div>
                             <div class="text-center bg-yellow-50 p-4 rounded-lg">
                                 <i class="fas fa-award text-3xl text-yellow-600 mb-2"></i>
-                                <p class="text-gray-700 font-semibold">4+</p>
+                                <p class="text-gray-700 font-semibold">5+</p>
                                 <p class="text-gray-600">شهادة احترافية</p>
                             </div>
                         </div>
@@ -350,7 +554,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">JavaScript</span>
-                                    <span class="text-blue-600 font-semibold">80%</span>
+                                    <span class="text-blue-600 font-semibold">100%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
@@ -359,7 +563,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">Python</span>
-                                    <span class="text-blue-600 font-semibold">97%</span>
+                                    <span class="text-blue-600 font-semibold">100%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="85%"></div>
@@ -368,7 +572,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">Java</span>
-                                    <span class="text-blue-600 font-semibold">80%</span>
+                                    <span class="text-blue-600 font-semibold">97%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="80%"></div>
@@ -384,7 +588,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">React/Vue.js</span>
-                                    <span class="text-blue-600 font-semibold">90%</span>
+                                    <span class="text-blue-600 font-semibold">98%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
@@ -393,7 +597,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">HTML/CSS</span>
-                                    <span class="text-blue-600 font-semibold">95%</span>
+                                    <span class="text-blue-600 font-semibold">99%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="95%"></div>
@@ -402,7 +606,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">Tailwind CSS</span>
-                                    <span class="text-blue-600 font-semibold">85%</span>
+                                    <span class="text-blue-600 font-semibold">98%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="85%"></div>
@@ -418,7 +622,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">MySQL</span>
-                                    <span class="text-blue-600 font-semibold">85%</span>
+                                    <span class="text-blue-600 font-semibold">99%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="85%"></div>
@@ -427,7 +631,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">MongoDB</span>
-                                    <span class="text-blue-600 font-semibold">80%</span>
+                                    <span class="text-blue-600 font-semibold">95%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="80%"></div>
@@ -436,7 +640,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">Redis</span>
-                                    <span class="text-blue-600 font-semibold">75%</span>
+                                    <span class="text-blue-600 font-semibold">90%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="75%"></div>
@@ -452,7 +656,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">GitHub</span>
-                                    <span class="text-blue-600 font-semibold">90%</span>
+                                    <span class="text-blue-600 font-semibold">100%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="90%"></div>
@@ -461,7 +665,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">Docker</span>
-                                    <span class="text-blue-600 font-semibold">80%</span>
+                                    <span class="text-blue-600 font-semibold">94%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="80%"></div>
@@ -470,7 +674,7 @@
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-gray-700">AWS</span>
-                                    <span class="text-blue-600 font-semibold">75%</span>
+                                    <span class="text-blue-600 font-semibold">90%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3">
                                     <div class="skill-bar bg-blue-600 h-3 rounded-full" style="width: 0%" data-width="75%"></div>
@@ -495,13 +699,13 @@
                     <div class="bg-white rounded-xl shadow-md p-6 relative border-l-4 border-green-500">
                         <div class="timeline-dot"></div>
                         <div class="timeline-item">
-                            <h3 class="text-xl font-bold text-gray-800">مطور رئيسي</h3>
-                            <p class="text-green-600 font-semibold">شركة التقنية المتقدمة</p>
-                            <p class="text-gray-600 mb-2">2021 - حتى الآن</p>
+                            <h3 class="text-xl font-bold text-gray-800">مشروع ويب سايت </h3>
+                            <p class="text-green-600 font-semibold">فريلانسر</p>
+                            <p class="text-gray-600 mb-2">2023</p>
                             <ul class="text-gray-700 space-y-2">
-                                <li><i class="fas fa-check-circle text-green-600 mr-2"></i>قيادة فريق من 5 مطورين في تطوير تطبيقات الويب</li>
+                                <li><i class="fas fa-check-circle text-green-600 mr-2"></i>قيادة فريق من 5 مطورين في تطوير موقع ويب كامل</li>
                                 <li><i class="fas fa-check-circle text-green-600 mr-2"></i>تطوير وتصميم واجهات مستخدم تفاعلية</li>
-                                <li><i class="fas fa-check-circle text-green-600 mr-2"></i>تحسين أداء التطبيقات بنسبة 40%</li>
+                                <li><i class="fas fa-check-circle text-green-600 mr-2"></i>تحسين أداء المواقع بنسبة 40%</li>
                             </ul>
                         </div>
                     </div>
@@ -509,10 +713,10 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-item">
                             <h3 class="text-xl font-bold text-gray-800">مطور واجهات مستخدم</h3>
-                            <p class="text-blue-600 font-semibold">وكالة الإبداع الرقمي</p>
-                            <p class="text-gray-600 mb-2">2019 - 2021</p>
+                            <p class="text-blue-600 font-semibold">فريلانسر</p>
+                            <p class="text-gray-600 mb-2">2019 - 2022</p>
                             <ul class="text-gray-700 space-y-2">
-                                <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>تصميم وتطوير أكثر من 20 موقعًا تجاريًا</li>
+                                <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>تصميم وتطوير أكثر من 10 موقعًا تجاريًا</li>
                                 <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>تعاون مع فرق التصميم لتحويل التصاميم إلى كود</li>
                                 <li><i class="fas fa-check-circle text-blue-600 mr-2"></i>ضمان التوافق عبر جميع المتصفحات والأجهزة</li>
                             </ul>
@@ -522,10 +726,10 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-item">
                             <h3 class="text-xl font-bold text-gray-800">مطور مبتدئ</h3>
-                            <p class="text-purple-600 font-semibold">شركة البرمجيات العربية</p>
-                            <p class="text-gray-600 mb-2">2017 - 2019</p>
+                            <p class="text-purple-600 font-semibold">شركة خاصة</p>
+                            <p class="text-gray-600 mb-2"> 2019</p>
                             <ul class="text-gray-700 space-y-2">
-                                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>المشاركة في تطوير تطبيقات الويب</li>
+                                <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>المشاركة في تطوير موقع ويب</li>
                                 <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>صيانة وتحديث المواقع الحالية</li>
                                 <li><i class="fas fa-check-circle text-purple-600 mr-2"></i>تعلم أفضل الممارسات في تطوير البرمجيات</li>
                             </ul>
@@ -536,61 +740,265 @@
         </div>
     </div>
 
-    <!-- Projects Modal -->
-    <div id="projectsModal" class="modal">
+    <!-- AI Projects Modal -->
+    <div id="aiProjectsModal" class="modal">
         <div class="modal-content">
-            <div class="bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 flex justify-between items-center">
-                <h2 class="text-3xl font-bold">المشاريع العلمية</h2>
-                <span class="text-4xl cursor-pointer hover:text-gray-300" onclick="closeModal('projectsModal')">&times;</span>
+            <div class="bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-6 flex justify-between items-center">
+                <h2 class="text-3xl font-bold">مشاريع الذكاء الاصطناعي</h2>
+                <span class="text-4xl cursor-pointer hover:text-gray-300" onclick="closeModal('aiProjectsModal')">&times;</span>
             </div>
             <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="project-card rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('project1')">
+                    <div class="ai-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('ai1')">
                         <div class="mb-4">
-                            <img src="https://picsum.photos/seed/project1/400/200" alt="مشروع 1" class="w-full h-48 object-cover rounded-lg">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f" alt="ذكاء اصطناعي" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">منصة التعلم الإلكتروني</h3>
-                        <p class="text-gray-700 mb-4">منصة متكاملة للتعلم الإلكتروني</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">نظام التعرف على الصور</h3>
+                        <p class="text-gray-700 mb-4">نظام متقدم للتعرف على الصور والكائنات باستخدام الشبكات العصبية العميقة</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">OpenCV</span>
                         </div>
                     </div>
-                    <div class="project-card rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('project2')">
+                    <div class="ai-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('ai2')">
                         <div class="mb-4">
-                            <img src="https://picsum.photos/seed/project2/400/200" alt="مشروع 2" class="w-full h-48 object-cover rounded-lg">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f" alt="ذكاء اصطناعي" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">تطبيق إدارة المشاريع</h3>
-                        <p class="text-gray-700 mb-4">تطبيق ويب لإدارة المشاريع</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">مساعد ذكي للدعم الفني</h3>
+                        <p class="text-gray-700 mb-4">نظام ذكي يوفر إجابات فورية لاستفسارات العملاء باستخدام معالجة اللغات الطبيعية</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Firebase</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Tailwind</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">NLP</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">BERT</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">FastAPI</span>
                         </div>
                     </div>
-                    <div class="project-card rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('project3')">
+                    <div class="ai-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('ai3')">
                         <div class="mb-4">
-                            <img src="https://picsum.photos/seed/project3/400/200" alt="مشروع 3" class="w-full h-48 object-cover rounded-lg">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f" alt="ذكاء اصطناعي" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">نظام التجارة الإلكترونية</h3>
-                        <p class="text-gray-700 mb-4">منصة متكاملة للتجارة الإلكترونية</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">محلل البيانات التنبؤي</h3>
+                        <p class="text-gray-700 mb-4">نظام يستخدم التعلم الآلي للتنبؤ بالاتجاهات المستقبلية بناءً على البيانات التاريخية</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Next.js</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Django</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Scikit-learn</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Pandas</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Matplotlib</span>
                         </div>
                     </div>
-                    <div class="project-card rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('project4')">
+                    <div class="ai-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('ai4')">
                         <div class="mb-4">
-                            <img src="https://picsum.photos/seed/project4/400/200" alt="مشروع 4" class="w-full h-48 object-cover rounded-lg">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f" alt="ذكاء اصطناعي" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">تطبيق المواعيد الطبية</h3>
-                        <p class="text-gray-700 mb-4">تطبيق لتسهيل预约 المواعيد الطبية</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">مولد النصوص المتقدم</h3>
+                        <p class="text-gray-700 mb-4">نظام مبتكر لإنشاء محتوى نصي ذكي باستخدام نماذج اللغة الكبيرة</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">React Native</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Express</span>
-                            <span class="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">GPT</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Hugging Face</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Projects Modal -->
+    <div id="pythonProjectsModal" class="modal">
+        <div class="modal-content">
+            <div class="bg-gradient-to-r from-yellow-500 to-amber-600 text-white p-6 flex justify-between items-center">
+                <h2 class="text-3xl font-bold">مشاريع بايثون</h2>
+                <span class="text-4xl cursor-pointer hover:text-gray-300" onclick="closeModal('pythonProjectsModal')">&times;</span>
+            </div>
+            <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="python-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('python1')">
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14" alt="مشاريع بايثون" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">لوحة تحليل البيانات</h3>
+                        <p class="text-gray-700 mb-4">منصة متكاملة لتحليل البيانات وتصورها باستخدام بايثون وتقنيات البيانات الضخمة</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Django</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Pandas</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Plotly</span>
+                        </div>
+                    </div>
+                    <div class="python-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('python2')">
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14" alt="مشاريع بايثون" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">أداة استخراج البيانات</h3>
+                        <p class="text-gray-700 mb-4">نظام متقدم لاستخراج ومعالجة البيانات من مصادر متنوعة باستخدام بايثون</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">BeautifulSoup</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Scrapy</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Selenium</span>
+                        </div>
+                    </div>
+                    <div class="python-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('python3')">
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14" alt="مشاريع بايثون" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">نظام الأتمتة الذكي</h3>
+                        <p class="text-gray-700 mb-4">منصة أتمتة العمليات باستخدام بايثون مع واجهة رسومية سهلة الاستخدام</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">PyQt</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">OpenCV</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">PyAutoGUI</span>
+                        </div>
+                    </div>
+                    <div class="python-project rounded-xl p-6 cursor-pointer" onclick="showProjectDetail('python4')">
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14" alt="مشاريع بايثون" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">محاكاة الأنظمة المعقدة</h3>
+                        <p class="text-gray-700 mb-4">نظام محاكاة تفاعلي للأنظمة المعقدة باستخدام بايثون وتقنيات المحاكاة</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">SimPy</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">NumPy</span>
+                            <span class="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Design Projects Modal -->
+    <div id="webDesignProjectsModal" class="modal">
+        <div class="modal-content">
+            <div class="bg-gradient-to-r from-pink-500 to-rose-600 text-white p-6 flex justify-between items-center">
+                <h2 class="text-3xl font-bold">تصميمات الويب</h2>
+                <span class="text-4xl cursor-pointer hover:text-gray-300" onclick="closeModal('webDesignProjectsModal')">&times;</span>
+            </div>
+            <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="web-design-project rounded-xl p-6 cursor-pointer relative" onclick="showProjectDetail('web1')">
+                        <!-- إضافة الصورة كأيقونة في الزاوية العلوية اليسرى -->
+                        <div class="web-design-icon">
+                            <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">موقع شركة تجارية متكامل</h3>
+                        <p class="text-gray-700 mb-4">تصميم وتطوير موقع تجاري متكامل مع واجهة مستخدم حديثة وسهلة الاستخدام</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Figma</span>
+                        </div>
+                    </div>
+                    <div class="web-design-project rounded-xl p-6 cursor-pointer relative" onclick="showProjectDetail('web2')">
+                        <!-- إضافة الصورة كأيقونة في الزاوية العلوية اليسرى -->
+                        <div class="web-design-icon">
+                            <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">مجلة إلكترونية تفاعلية</h3>
+                        <p class="text-gray-700 mb-4">تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهلة الاستخدام</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">GSAP</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Adobe XD</span>
+                        </div>
+                    </div>
+                    <div class="web-design-project rounded-xl p-6 cursor-pointer relative" onclick="showProjectDetail('web3')">
+                        <!-- إضافة الصورة كأيقونة في الزاوية العلوية اليسرى -->
+                        <div class="web-design-icon">
+                            <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">منصة تعليمية تفاعلية</h3>
+                        <p class="text-gray-700 mb-4">تصميم وتطوير منصة تعليمية تفاعلية مع واجهة مستخدم جذابة وسهلة الاستخدام</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Three.js</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Sketch</span>
+                        </div>
+                    </div>
+                    <div class="web-design-project rounded-xl p-6 cursor-pointer relative" onclick="showProjectDetail('web4')">
+                        <!-- إضافة الصورة كأيقونة في الزاوية العلوية اليسرى -->
+                        <div class="web-design-icon">
+                            <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="project-image-container">
+                                <img src="https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf" alt="تصميم ويب" class="project-image">
+                                <div class="project-overlay">
+                                    <p class="text-white font-semibold">انقر لمعرفة المزيد</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">تطبيق ويب متجاوب للجوال</h3>
+                        <p class="text-gray-700 mb-4">تصميم تطبيق ويب متجاوب بالكامل للجوال مع واجهة مستخدم سلسة ومتعددة الأغراض</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                            <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Framer Motion</span>
                         </div>
                     </div>
                 </div>
@@ -608,36 +1016,44 @@
             <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert1')">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-award text-5xl text-yellow-600"></i>
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d" alt="شهادة IBM SkillsBuild" class="w-full h-64 object-contain rounded-lg">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Google Cloud Architect</h3>
-                        <p class="text-gray-700 mb-4">شهادة احترافية في تصميم البنية التحتية السحابية</p>
-                        <p class="text-gray-600 text-sm">تاريخ الحصول: 2023</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">IBM SkillsBuild</h3>
+                        <p class="text-gray-700 mb-2">Artificial Intelligence Fundamentals</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 30 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert2')">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-award text-5xl text-yellow-600"></i>
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/4b6cf0fe-489d-4bed-90e0-9905552a97cf_%D8%AA%D8%AD%D8%A7%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA1.jpg?auth_key=1790087527-97f251870bf1440bab1598c4c35a6cd9-0-84a6bf8afab04fc2a2eaadff637f6d13" alt="شهادة Cisco Networking Academy" class="w-full h-64 object-contain rounded-lg">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">AWS Certified Developer</h3>
-                        <p class="text-gray-700 mb-4">شهادة مطور AWS المتقدم</p>
-                        <p class="text-gray-600 text-sm">تاريخ الحصول: 2022</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cisco Networking Academy</h3>
+                        <p class="text-gray-700 mb-2">Data Analytics Essentials</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 22 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert3')">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-award text-5xl text-yellow-600"></i>
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/47c29c56-0f9e-4064-b844-c56bf22de490_%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA.jpg?auth_key=1790087527-f33ad7def47b4ed1a7f1eb71f4fcebff-0-38729447123482ceca783968db820a67" alt="شهادة HP LIFE" class="w-full h-64 object-contain rounded-lg">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">React Professional</h3>
-                        <p class="text-gray-700 mb-4">شهادة احترافية في React.js</p>
-                        <p class="text-gray-600 text-sm">تاريخ الحصول: 2022</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">HP LIFE and HP Foundation</h3>
+                        <p class="text-gray-700 mb-2">Global HP LIFE Project</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 17 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert4')">
-                        <div class="text-center mb-4">
-                            <i class="fas fa-award text-5xl text-yellow-600"></i>
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/0c2cff84-6f84-49a3-b3f0-450dee2fd9d3_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-2d3772497cbb4c0988c6f301ee8fecc0-0-d23dd4ebae0b477d0bd22e9e975232f4" alt="شهادة مكتب معلومات و البحث" class="w-full h-64 object-contain rounded-lg">
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">MongoDB Certified Developer</h3>
-                        <p class="text-gray-700 mb-4">شهادة مطور MongoDB</p>
-                        <p class="text-gray-600 text-sm">تاريخ الحصول: 2021</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">مكتب معلومات و البحث</h3>
+                        <p class="text-gray-700 mb-2">python AI</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 15 مارس 2025</p>
+                    </div>
+                    <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert5')">
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/68193f39-1bc7-4390-b4ae-24231bd3d754_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-8882f9685ea84887a1a6fe471cc199d1-0-e2ae73507118b54d7933c023593166c6" alt="شهادة almentor" class="w-full h-64 object-contain rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">almentor</h3>
+                        <p class="text-gray-700 mb-2">AI FOR BEGINNERS</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 15 مارس 2025</p>
                     </div>
                 </div>
             </div>
@@ -647,42 +1063,44 @@
     <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
-            <div class="bg-gradient-to-r from-pink-500 to-rose-600 text-white p-6 flex justify-between items-center">
+            <div class="bg-gradient-to-r from-green-500 to-teal-600 text-white p-6 flex justify-between items-center">
                 <h2 class="text-3xl font-bold">تواصل معي</h2>
                 <span class="text-4xl cursor-pointer hover:text-gray-300" onclick="closeModal('contactModal')">&times;</span>
             </div>
             <div class="p-8">
-                <form class="space-y-6 max-w-2xl mx-auto">
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">الاسم</label>
-                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 transition" placeholder="أدخل اسمك">
+                <!-- Direct Contact Buttons -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">تواصل معي مباشرة</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="https://wa.me/201030375356" target="_blank" class="contact-button whatsapp-button flex items-center justify-center p-4 rounded-lg text-lg font-semibold">
+                            <i class="fab fa-whatsapp text-2xl mr-2 contact-icon"></i>
+                            واتساب الأول: 01030375356
+                        </a>
+                        <a href="https://wa.me/201554843480" target="_blank" class="contact-button whatsapp-button flex items-center justify-center p-4 rounded-lg text-lg font-semibold">
+                            <i class="fab fa-whatsapp text-2xl mr-2 contact-icon"></i>
+                            واتساب الثاني: 01554843480
+                        </a>
+                        <a href="tel:+201030375356" class="contact-button phone-button flex items-center justify-center p-4 rounded-lg text-lg font-semibold">
+                            <i class="fas fa-phone-alt text-2xl mr-2 contact-icon"></i>
+                            هاتف: 01030375356
+                        </a>
+                        <a href="https://www.facebook.com/amam.alsyd.ly" target="_blank" class="contact-button facebook-button flex items-center justify-center p-4 rounded-lg text-lg font-semibold">
+                            <i class="fab fa-facebook-f text-2xl mr-2 contact-icon"></i>
+                            فيسبوك
+                        </a>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
-                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 transition" placeholder="أدخل بريدك الإلكتروني">
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2">الرسالة</label>
-                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500 transition" rows="4" placeholder="اكتب رسالتك هنا"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300 transform hover:scale-105">
-                        إرسال الرسالة
-                    </button>
-                </form>
+                </div>
+                <!-- Social Media Links -->
                 <div class="mt-8 text-center">
-                    <h3 class="text-xl font-bold mb-4">طرق أخرى للتواصل</h3>
+                    <h3 class="text-xl font-bold mb-4">وسائل التواصل الأخرى</h3>
                     <div class="flex justify-center space-x-6">
-                        <a href="#" class="text-gray-600 hover:text-pink-500 transition transform hover:scale-110">
+                        <a href="https://www.facebook.com/amam.alsyd.ly" target="_blank" class="text-gray-600 hover:text-teal-500 transition transform hover:scale-110">
+                            <i class="fab fa-facebook text-3xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/emam-sayd-ali-2636b0384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+  "target="_blank"class="text-gray-600 hover:text-teal-500 transition transform hover:scale-110">
                             <i class="fab fa-linkedin text-3xl"></i>
                         </a>
-                        <a href="#" class="text-gray-600 hover:text-pink-500 transition transform hover:scale-110">
-                            <i class="fab fa-github text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-pink-500 transition transform hover:scale-110">
-                            <i class="fab fa-twitter text-3xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-600 hover:text-pink-500 transition transform hover:scale-110">
-                            <i class="fas fa-envelope text-3xl"></i>
                         </a>
                     </div>
                 </div>
@@ -749,93 +1167,210 @@
 
         // Project details data
         const projectDetails = {
-            project1: {
-                title: "منصة التعلم الإلكتروني",
-                image: "https://picsum.photos/seed/project1/800/400",
-                description: "منصة تعليمية متكاملة تدعم الفيديو التفاعلي، الاختبارات، والشهادات الإلكترونية.",
+            ai1: {
+                title: "نظام التعرف على الصور",
+                image: "https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f",
+                description: "نظام متقدم للتعرف على الصور والكائنات باستخدام الشبكات العصبية العميقة.",
                 features: [
-                    "دعم الفيديو التفاعلي مع إمكانية التشغيل البطيء",
-                    "نظام اختبارات متقدم مع تصحيح تلقائي",
-                    "إصدار شهادات رقمية قابلة للتحقق",
-                    "لوحة تحكم للمدرسين والمتدربين",
-                    "دعم متعدد اللغات"
+                    "استخدام TensorFlow و Keras لبناء نماذج التعرف على الصور",
+                    "دعم للتعرف على وجوه الأشخاص والكائنات المختلفة",
+                    "واجهة رسومية سهلة الاستخدام مع معاينة الصور",
+                    "تقديم نتائج دقيقة مع نسبة خطأ أقل من 5%",
+                    "دعم للتعامل مع مجموعات البيانات الضخمة"
                 ],
-                tech: ["React", "Node.js", "MongoDB", "WebRTC", "AWS"]
+                tech: ["TensorFlow", "Python", "OpenCV", "Flask", "Docker"]
             },
-            project2: {
-                title: "تطبيق إدارة المشاريع",
-                image: "https://picsum.photos/seed/project2/800/400",
-                description: "تطبيق ويب متقدم لإدارة المشاريع مع ميزات تتبع المهام والتحقق من التقدم.",
+            ai2: {
+                title: "مساعد ذكي للدعم الفني",
+                image: "https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f",
+                description: "نظام ذكي يوفر إجابات فورية لاستفسارات العملاء باستخدام معالجة اللغات الطبيعية.",
                 features: [
-                    "لوحة Kanban تفاعلية",
-                    "تتبع المهام والتحقق من التقدم",
-                    "إشعارات فورية للمستخدمين",
-                    "تقارير أداء مفصلة",
-                    "دعم المشاريع المتعددة"
+                    "استخدام نماذج BERT للفهم العميق للغة الطبيعية",
+                    "تدريب على مجموعة بيانات واسعة من الاستفسارات الشائعة",
+                    "دعم للغة العربية والإنجليزية",
+                    "تطوير واجهة سهلة للمستخدمين",
+                    "تقارير تحليلية لتحسين الأجابة"
                 ],
-                tech: ["Vue.js", "Firebase", "Tailwind CSS", "Chart.js", "Pusher"]
+                tech: ["NLP", "BERT", "FastAPI", "Docker", "PostgreSQL"]
             },
-            project3: {
-                title: "نظام التجارة الإلكترونية",
-                image: "https://picsum.photos/seed/project3/800/400",
-                description: "منصة تجارة إلكترونية متكاملة مع دعم متاجر متعددة وإدارة المخزون.",
+            ai3: {
+                title: "محلل البيانات التنبؤي",
+                image: "https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f",
+                description: "نظام يستخدم التعلم الآلي للتنبؤ بالاتجاهات المستقبلية بناءً على البيانات التاريخية.",
                 features: [
-                    "دعم متاجر متعددة البائعين",
-                    "نظام دفعات آمنة متعدد البوابات",
-                    "إدارة المخزون تلقائية",
-                    "تحليلات مبيعات متقدمة",
-                    "دعم اللغات المتعددة"
+                    "استخدام خوارزميات التعلم الآلي المتقدمة",
+                    "معالجة البيانات الضخمة وتنظيفها",
+                    "إنشاء تقارير تفاعلية مع رسوم بيانية",
+                    "توفير تنبؤات دقيقة مع فترات ثقة",
+                    "دعم للتحديثات الفورية للبيانات"
                 ],
-                tech: ["Next.js", "Django", "PostgreSQL", "Stripe", "Redis"]
+                tech: ["Scikit-learn", "Pandas", "Matplotlib", "Apache Spark", "MongoDB"]
             },
-            project4: {
-                title: "تطبيق المواعيد الطبية",
-                image: "https://picsum.photos/seed/project4/800/400",
-                description: "تطبيق لتسهيل预约 المواعيد الطبية مع إدارة الأطباء والمستشفيات.",
+            ai4: {
+                title: "مولد النصوص المتقدم",
+                image: "https://z-cdn-media.chatglm.cn/files/30d441da-5154-4fc1-bfcc-51db05e5821a_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.png?auth_key=1790158012-9c81a9e3e3fd42f685479e3c2d1b0adb-0-1101cbb461e7ce711601a0c0c19e307f",
+                description: "نظام مبتكر لإنشاء محتوى نصي ذكي باستخدام نماذج اللغة الكبيرة.",
                 features: [
-                    "جدول مواعيد تفاعلي",
-                    "إشعارات للمواعيد القادمة",
-                    "تقييم الأطباء والمستشفيات",
-                    "تاريخ طبي تفاعلي",
-                    "دعم الفيديو الطبي"
+                    "استخدام نماذج GPT للإنشاء النصي",
+                    "تخصيص النتائج حسب متطلبات المستخدم",
+                    "دعم لإنشاء أنواع متنوعة من المحتوى",
+                    "تحسين الجودة والاتساق في النصوص",
+                    "واجهة سهلة الاستخدام مع خيارات تخصيص"
                 ],
-                tech: ["React Native", "Express", "MySQL", "Socket.io", "Twilio"]
+                tech: ["GPT", "Hugging Face", "PyTorch", "FastAPI", "Redis"]
+            },
+            python1: {
+                title: "لوحة تحليل البيانات",
+                image: "https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14",
+                description: "منصة متكاملة لتحليل البيانات وتصورها باستخدام بايثون وتقنيات البيانات الضخمة.",
+                features: [
+                    "معالجة البيانات الضخمة بكفاءة عالية",
+                    "إنشاء لوحات معلومات تفاعلية",
+                    "دعم لتحليل البيانات في الوقت الفعلي",
+                    "توليد تقارير مفصلة ورسوم بيانية",
+                    "واجهة مستخدم سهلة الاستخدام"
+                ],
+                tech: ["Django", "Pandas", "Plotly", "Apache Kafka", "PostgreSQL"]
+            },
+            python2: {
+                title: "أداة استخراج البيانات",
+                image: "https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14",
+                description: "نظام متقدم لاستخراج ومعالجة البيانات من مصادر متنوعة باستخدام بايثون.",
+                features: [
+                    "استخراج البيانات من مواقع الويب والوثائق",
+                    "تنظيف ومعالجة البيانات المستخرجة",
+                    "دعم لتنسيقات بيانات متعددة",
+                    "تخزين البيانات في قواعد بيانات مختلفة",
+                    "واجهة رسومية سهلة الاستخدام"
+                ],
+                tech: ["BeautifulSoup", "Scrapy", "Selenium", "MongoDB", "Redis"]
+            },
+            python3: {
+                title: "نظام الأتمتة الذكي",
+                image: "https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14",
+                description: "منصة أتمتة العمليات باستخدام بايثون مع واجهة رسومية سهلة الاستخدام.",
+                features: [
+                    "أتمتة المهام المتكررة بكفاءة",
+                    "جدولة المهام وتنفيذها تلقائياً",
+                    "مراقبة الأداء وتقارير الحالة",
+                    "دعم للتكامل مع أنظمة خارجية",
+                    "واجهة مستخدم سهلة التخصيص"
+                ],
+                tech: ["PyQt", "OpenCV", "PyAutoGUI", "Celery", "RabbitMQ"]
+            },
+            python4: {
+                title: "محاكاة الأنظمة المعقدة",
+                image: "https://z-cdn-media.chatglm.cn/files/b38568a2-9993-4653-b40b-1d9fb47a9754_%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%20%D8%A8%D8%A7%D9%8A%D8%AB%D9%88%D9%86.png?auth_key=1790158012-637afbf01c964b08ac2cbb829f369476-0-37f6ecc240cebf719a31a92bfd57dc14",
+                description: "نظام محاكاة تفاعلي للأنظمة المعقدة باستخدام بايثون وتقنيات المحاكاة.",
+                features: [
+                    "محاكاة الأنظمة المعقدة بدقة",
+                    "توليد نتائج تفاعلية في الوقت الفعلي",
+                    "تحليل البيانات الناتجة عن المحاكاة",
+                    "تقديم تقارير مفصلة عن النتائج",
+                    "دعم للمحاكاة المتوازية"
+                ],
+                tech: ["SimPy", "NumPy", "Matplotlib", "Dask", "SQLite"]
+            },
+            web1: {
+                title: "موقع شركة تجارية متكامل",
+                image: "https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf",
+                description: "تصميم وتطوير موقع تجاري متكامل مع واجهة مستخدم حديثة وسهلة الاستخدام.",
+                features: [
+                    "تصميم متجاوب يعمل على جميع الأجهزة",
+                    "نظام إدارة محتوى سهل الاستخدام",
+                    "متجر إلكتروني متكامل مع دفعات آمنة",
+                    "تحسين محركات البحث (SEO)",
+                    "أدوات تحليل الزوار والمبيعات"
+                ],
+                tech: ["React", "Tailwind CSS", "Figma", "Node.js", "MongoDB"]
+            },
+            web2: {
+                title: "مجلة إلكترونية تفاعلية",
+                image: "https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf",
+                description: "تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهلة الاستخدام.",
+                features: [
+                    "تصميم جذاب مع تأثيرات بصرية",
+                    "تجربة قراءة مريحة مع تمرير سلس",
+                    "نظام تصنيف وتصفية للمحتوى",
+                    "دعم للتعليقات والمشاركة",
+                    "تحميل أسرع مع تحسين الأداء"
+                ],
+                tech: ["Vue.js", "GSAP", "Adobe XD", "Nuxt.js", "Firebase"]
+            },
+            web3: {
+                title: "منصة تعليمية تفاعلية",
+                image: "https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf",
+                description: "تصميم وتطوير منصة تعليمية تفاعلية مع واجهة مستخدم جذابة وسهلة الاستخدام.",
+                features: [
+                    "دعم للمحتوى التعليمي المتنوع",
+                    "نظام تتبع تقدم المتعلم",
+                    "اختبارات وتقييم تفاعلي",
+                    "منتاقشة تواصل بين المتعلمين",
+                    "دعم للدفعات الإلكترونية"
+                ],
+                tech: ["Next.js", "Three.js", "Sketch", "GraphQL", "PostgreSQL"]
+            },
+            web4: {
+                title: "تطبيق ويب متجاوب للجوال",
+                image: "https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf",
+                description: "تصميم تطبيق ويب متجاوب بالكامل للجوال مع واجهة مستخدم سلسة ومتعددة الأغراض.",
+                features: [
+                    "تجربة مستخدم سلسة على جميع الأجهزة",
+                    "تصميم متجاوب بالكامل",
+                    "أداء عالي وتحميل سريع",
+                    "دعم للعمل بدون إنترنت",
+                    "إشعارات فورية للمستخدمين"
+                ],
+                tech: ["React Native", "Bootstrap", "Framer Motion", "PWA", "Service Worker"]
             }
         };
 
         // Certificate details data
         const certificateDetails = {
             cert1: {
-                title: "Google Cloud Architect",
-                image: "https://picsum.photos/seed/cert1/400/300",
-                description: "شهادة احترافية في تصميم البنية التحتية السحابية على منصة Google Cloud.",
-                details: "تغطي هذه الشهادة تصميم البنى التحتية السحابية الآمنة والموثوقة والقابلة للتوسع باستخدام خدمات Google Cloud Platform.",
-                issuer: "Google Cloud",
-                date: "أبريل 2023"
+                title: "IBM SkillsBuild",
+                image: "https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d",
+                description: "Artificial Intelligence Fundamentals",
+                details: "شهادة في أساسيات الذكاء الاصطناعي مقدمة من IBM SkillsBuild، تشمل المفاهيم الأساسية للذكاء الاصطناعي وتطبيقاته العملية.",
+                issuer: "IBM SkillsBuild",
+                date: "30 مارس 2025",
+                verification: "https://www.ibm.com/certify"
             },
             cert2: {
-                title: "AWS Certified Developer",
-                image: "https://picsum.photos/seed/cert2/400/300",
-                description: "شهادة مطور AWS المتقدم لتطوير التطبيقات السحابية.",
-                details: "تأكد هذه الشهادة القدرة على تطوير وتوزيع التطبيقات الآمنة والفعالة على منصة AWS.",
-                issuer: "Amazon Web Services",
-                date: "يونيو 2022"
+                title: "Cisco Networking Academy",
+                image: "https://z-cdn-media.chatglm.cn/files/4b6cf0fe-489d-4bed-90e0-9905552a97cf_%D8%AA%D8%AD%D8%A7%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA1.jpg?auth_key=1790087527-97f251870bf1440bab1598c4c35a6cd9-0-84a6bf8afab04fc2a2eaadff637f6d13",
+                description: "Data Analytics Essentials",
+                details: "شهادة في أساسيات تحليل البيانات مقدمة من Cisco Networking Academy، تغطي جمع وتحليل البيات واستخلاص الأدلة.",
+                issuer: "Cisco Networking Academy",
+                date: "22 مارس 2025",
+                verification: "https://www.netacad.com/"
             },
             cert3: {
-                title: "React Professional",
-                image: "https://picsum.photos/seed/cert3/400/300",
-                description: "شهادة احترافية في تطوير تطبيقات الويب باستخدام React.js.",
-                details: "تغطي الشهادة مفاهيم React المتقدمة بما في ذلك Hooks, Context API, وأفضل الممارسات.",
-                issuer: "React Developer Certification",
-                date: "سبتمبر 2022"
+                title: "HP LIFE and HP Foundation",
+                image: "https://z-cdn-media.chatglm.cn/files/47c29c56-0f9e-4064-b844-c56bf22de490_%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA.jpg?auth_key=1790087527-f33ad7def47b4ed1a7f1eb71f4fcebff-0-38729447123482ceca783968db820a67",
+                description: "Global HP LIFE Project",
+                details: "شهادة تكريمية من HP LIFE و HP Foundation لدعم مشاريع التعليم والتدريب الرقمي.",
+                issuer: "HP Foundation",
+                date: "17 مارس 2025",
+                verification: "https://hplife.org/"
             },
             cert4: {
-                title: "MongoDB Certified Developer",
-                image: "https://picsum.photos/seed/cert4/400/300",
-                description: "شهادة مطور MongoDB لقاعدة البيانات غير العلائقية.",
-                details: "تأكد هذه الشهادة القدرة على تصميم وتطوير تطبيقات باستخدام MongoDB.",
-                issuer: "MongoDB University",
-                date: "مارس 2021"
+                title: "مكتب معلومات و البحث",
+                image: "https://z-cdn-media.chatglm.cn/files/0c2cff84-6f84-49a3-b3f0-450dee2fd9d3_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-2d3772497cbb4c0988c6f301ee8fecc0-0-d23dd4ebae0b477d0bd22e9e975232f4",
+                description: "python AI",
+                details: "شهادة في دورة برمجة بايثون لتطبيقات الذكاء الاصطناعي من مكتب معلومات والبحث.",
+                issuer: "مكتب معلومات و البحث",
+                date: "15 مارس 2025",
+                verification: "رقم الشهادة: 4f6a5af"
+            },
+            cert5: {
+                title: "almentor",
+                image: "https://z-cdn-media.chatglm.cn/files/68193f39-1bc7-4390-b4ae-24231bd3d754_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-8882f9685ea84887a1a6fe471cc199d1-0-e2ae73507118b54d7933c023593166c6",
+                description: "AI FOR BEGINNERS",
+                details: "شهادة إتمام دورة مقدمة في الذكاء الاصطناعي للمبتدئين من منصة almentor.",
+                issuer: "almentor",
+                date: "15 مارس 2025",
+                verification: "ID: px9mbqpk7"
             }
         };
 
@@ -872,11 +1407,23 @@
             
             title.textContent = cert.title;
             content.innerHTML = `
-                <img src="${cert.image}" alt="${cert.title}" class="w-full h-48 object-cover rounded-lg mb-6">
-                <p class="text-gray-700 mb-4">${cert.description}</p>
-                <p class="text-gray-600 mb-2"><strong>الجهة المانحة:</strong> ${cert.issuer}</p>
-                <p class="text-gray-600 mb-4"><strong>تاريخ الحصول:</strong> ${cert.date}</p>
-                <p class="text-gray-700">${cert.details}</p>
+                <div class="mb-6">
+                    <img src="${cert.image}" alt="${cert.title}" class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg shadow-lg">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <p class="text-gray-700 mb-2"><strong>الجهة المانحة:</strong> ${cert.issuer}</p>
+                        <p class="text-gray-700 mb-2"><strong>عنوان الشهادة:</strong> ${cert.description}</p>
+                        <p class="text-gray-700 mb-2"><strong>تاريخ الحصول:</strong> ${cert.date}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 mb-2"><strong>رقم التحقق:</strong> ${cert.verification}</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">وصف الشهادة:</h3>
+                    <p class="text-gray-700">${cert.details}</p>
+                </div>
             `;
             
             modal.style.display = 'block';
