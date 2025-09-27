@@ -377,7 +377,7 @@
                          class="profile-image">
                 </div>
                 <div class="absolute -bottom-2 -left-2 bg-yellow-400 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                     متاح للعمل بدوام كامل / عن بعد
+                     متاح للعمل: بدوام كامل / عن بعد
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@
 
     <!-- Main Content - Icon Cards Grid -->
     <main class="container mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">أقسام السيرة الذاتية</h2>
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">أقسام البورتفوليو</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- About Card -->
@@ -1015,6 +1015,17 @@
             </div>
             <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- New Certificate - Elements of AI -->
+                    <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert0')">
+                        <div class="mb-4">
+                            <img src="https://z-cdn-media.chatglm.cn/files/ed7eb965-db0a-4740-9df8-fdcd1eb43baa_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.png?auth_key=1790504060-6082c50698f847aeaf2cfacbc45d2916-0-8e2604f1cb17d5576cc69e1460c201ab" alt="شهادة Elements of AI" class="w-full h-64 object-contain rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Elements of AI</h3>
+                        <p class="text-gray-700 mb-2">CERTIFICATE OF COMPLETION</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 27 سبتمبر 2025</p>
+                    </div>
+                    
+                    <!-- Original Certificates -->
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert1')">
                         <div class="mb-4">
                             <img src="https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d" alt="شهادة IBM SkillsBuild" class="w-full h-64 object-contain rounded-lg">
@@ -1097,10 +1108,8 @@
                         <a href="https://www.facebook.com/amam.alsyd.ly" target="_blank" class="text-gray-600 hover:text-teal-500 transition transform hover:scale-110">
                             <i class="fab fa-facebook text-3xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/emam-sayd-ali-2636b0384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-  "target="_blank"class="text-gray-600 hover:text-teal-500 transition transform hover:scale-110">
+                        <a href="https://www.linkedin.com/in/emam-sayd-ali-2636b0384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-gray-600 hover:text-teal-500 transition transform hover:scale-110">
                             <i class="fab fa-linkedin text-3xl"></i>
-                        </a>
                         </a>
                     </div>
                 </div>
@@ -1327,6 +1336,15 @@
 
         // Certificate details data
         const certificateDetails = {
+            cert0: {
+                title: "Elements of AI",
+                image: "https://z-cdn-media.chatglm.cn/files/ed7eb965-db0a-4740-9df8-fdcd1eb43baa_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.png?auth_key=1790504060-6082c50698f847aeaf2cfacbc45d2916-0-8e2604f1cb17d5576cc69e1460c201ab",
+                description: "CERTIFICATE OF COMPLETION",
+                details: "شهادة إتمام دورة Elements of AI، وهي دورة مقدمة في أساسيات الذكاء الاصطناعي من Minnalearn بالتعاون مع جامعة هلسنكي. تشمل الدورة مفاهيم أساسية في الذكاء الاصطناعي وتطبيقاته العملية.",
+                issuer: "Minnalearn and University of Helsinki",
+                date: "27 سبتمبر 2025",
+                verification: "https://www.elementsofai.com/"
+            },
             cert1: {
                 title: "IBM SkillsBuild",
                 image: "https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d",
