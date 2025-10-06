@@ -172,25 +172,51 @@
             filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8));
         }
         
+        /* Enhanced Certificate Display Styles */
         .certificate-image-container {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 320px; /* Increased height for better visibility */
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            position: relative;
+            border: 3px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .certificate-image-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
         .certificate-image {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: contain; /* Changed from cover to contain to show full certificate */
             display: block;
+            transition: transform 0.3s ease;
+            padding: 8px; /* Add padding to ensure edges are visible */
+            box-sizing: border-box;
+        }
+        
+        .certificate-image:hover {
+            transform: scale(1.05);
         }
         
         .certificate-detail-image {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-height: 70vh; /* Limit height but ensure visibility */
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            margin: 0 auto;
+            display: block;
+            border: 3px solid #e9ecef;
         }
         
         .contact-button {
@@ -360,6 +386,144 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Enhanced Elements of AI certificate styling */
+        .elements-ai-container {
+            width: 100%;
+            height: 320px; /* Increased height */
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            position: relative;
+            border: 3px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .elements-ai-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .elements-ai-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed from cover to contain */
+            display: block;
+            transition: transform 0.3s ease;
+            padding: 8px; /* Add padding */
+            box-sizing: border-box;
+        }
+
+        .elements-ai-image:hover {
+            transform: scale(1.05);
+        }
+
+        .elements-ai-detail {
+            max-width: 100%;
+            height: auto;
+            max-height: 70vh; /* Limit height but ensure visibility */
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            margin: 0 auto;
+            display: block;
+            border: 3px solid #e9ecef;
+        }
+
+        /* Fallback for certificate images */
+        .certificate-fallback {
+            width: 100%;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .certificate-fallback i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-fallback p {
+            text-align: center;
+            padding: 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Certificate modal enhancements */
+        .certificate-modal-content {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+        }
+
+        .certificate-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .certificate-info-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-info-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .certificate-info-label {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-info-value {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .certificate-image-container {
+                height: 280px;
+            }
+            
+            .elements-ai-container {
+                height: 280px;
+            }
+            
+            .certificate-detail-image {
+                max-height: 60vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .certificate-image-container {
+                height: 240px;
+            }
+            
+            .elements-ai-container {
+                height: 240px;
+            }
+            
+            .certificate-detail-image {
+                max-height: 50vh;
+            }
+        }
     </style>
 </head>
 <body>
@@ -527,7 +691,7 @@
                             </div>
                             <div class="text-center bg-yellow-50 p-4 rounded-lg">
                                 <i class="fas fa-award text-3xl text-yellow-600 mb-2"></i>
-                                <p class="text-gray-700 font-semibold">5+</p>
+                                <p class="text-gray-700 font-semibold">6+</p>
                                 <p class="text-gray-600">شهادة احترافية</p>
                             </div>
                         </div>
@@ -950,7 +1114,7 @@
                             </div>
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">مجلة إلكترونية تفاعلية</h3>
-                        <p class="text-gray-700 mb-4">تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهلة الاستخدام</p>
+                        <p class="text-gray-700 mb-4">تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهولة الاستخدام</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Vue.js</span>
                             <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm">GSAP</span>
@@ -1015,56 +1179,81 @@
             </div>
             <div class="p-8 overflow-y-auto" style="max-height: 70vh;">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- New Certificate - Elements of AI -->
+                    <!-- Elements of AI Certificate (Enhanced display) -->
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert0')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/ed7eb965-db0a-4740-9df8-fdcd1eb43baa_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.png?auth_key=1790504060-6082c50698f847aeaf2cfacbc45d2916-0-8e2604f1cb17d5576cc69e1460c201ab" alt="شهادة Elements of AI" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 elements-ai-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/d41d95bf-addc-43a2-8c12-c463d0175f21_a3012b74-b6b2-4cc2-a5a7-51eb41cbb020.jpg?auth_key=1791313872-124af9e7e6be45d9aba1b08d4fd8b1fb-0-f7b61fdd7282f0cb3a1a4d41b4f70686" 
+                                 alt="شهادة Elements of AI" 
+                                 class="elements-ai-image"
+                                 onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'certificate-fallback\\'><i class=\\'fas fa-certificate\\'></i><p>Elements of AI Certificate</p></div>'">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Elements of AI</h3>
                         <p class="text-gray-700 mb-2">CERTIFICATE OF COMPLETION</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 27 سبتمبر 2025</p>
                     </div>
                     
-                    <!-- Original Certificates -->
+                    <!-- Existing Certificates -->
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert1')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d" alt="شهادة IBM SkillsBuild" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/73fc59ab-9cef-4c2c-844a-f9b52d53f4c7_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A1.jpg?auth_key=1790087527-de4270146a594724b1c0df239fb4542a-0-8407826a6159065e5afed9b6ee7a550d" 
+                                 alt="شهادة IBM SkillsBuild" 
+                                 class="certificate-image">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">IBM SkillsBuild</h3>
                         <p class="text-gray-700 mb-2">Artificial Intelligence Fundamentals</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 30 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert2')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/4b6cf0fe-489d-4bed-90e0-9905552a97cf_%D8%AA%D8%AD%D8%A7%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA1.jpg?auth_key=1790087527-97f251870bf1440bab1598c4c35a6cd9-0-84a6bf8afab04fc2a2eaadff637f6d13" alt="شهادة Cisco Networking Academy" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/4b6cf0fe-489d-4bed-90e0-9905552a97cf_%D8%AA%D8%AD%D8%A7%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA1.jpg?auth_key=1790087527-97f251870bf1440bab1598c4c35a6cd9-0-84a6bf8afab04fc2a2eaadff637f6d13" 
+                                 alt="شهادة Cisco Networking Academy" 
+                                 class="certificate-image">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Cisco Networking Academy</h3>
                         <p class="text-gray-700 mb-2">Data Analytics Essentials</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 22 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert3')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/47c29c56-0f9e-4064-b844-c56bf22de490_%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA.jpg?auth_key=1790087527-f33ad7def47b4ed1a7f1eb71f4fcebff-0-38729447123482ceca783968db820a67" alt="شهادة HP LIFE" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/47c29c56-0f9e-4064-b844-c56bf22de490_%D8%AA%D8%AD%D9%84%D9%8A%D9%84%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA.jpg?auth_key=1790087527-f33ad7def47b4ed1a7f1eb71f4fcebff-0-38729447123482ceca783968db820a67" 
+                                 alt="شهادة HP LIFE" 
+                                 class="certificate-image">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">HP LIFE and HP Foundation</h3>
                         <p class="text-gray-700 mb-2">Global HP LIFE Project</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 17 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert4')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/0c2cff84-6f84-49a3-b3f0-450dee2fd9d3_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-2d3772497cbb4c0988c6f301ee8fecc0-0-d23dd4ebae0b477d0bd22e9e975232f4" alt="شهادة مكتب معلومات و البحث" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/0c2cff84-6f84-49a3-b3f0-450dee2fd9d3_%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-2d3772497cbb4c0988c6f301ee8fecc0-0-d23dd4ebae0b477d0bd22e9e975232f4" 
+                                 alt="شهادة مكتب معلومات و البحث" 
+                                 class="certificate-image">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">مكتب معلومات و البحث</h3>
                         <p class="text-gray-700 mb-2">python AI</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 15 مارس 2025</p>
                     </div>
                     <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert5')">
-                        <div class="mb-4">
-                            <img src="https://z-cdn-media.chatglm.cn/files/68193f39-1bc7-4390-b4ae-24231bd3d754_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-8882f9685ea84887a1a6fe471cc199d1-0-e2ae73507118b54d7933c023593166c6" alt="شهادة almentor" class="w-full h-64 object-contain rounded-lg">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/68193f39-1bc7-4390-b4ae-24231bd3d754_%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A.jpg?auth_key=1790087527-8882f9685ea84887a1a6fe471cc199d1-0-e2ae73507118b54d7933c023593166c6" 
+                                 alt="شهادة almentor" 
+                                 class="certificate-image">
                         </div>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">almentor</h3>
                         <p class="text-gray-700 mb-2">AI FOR BEGINNERS</p>
                         <p class="text-gray-600 text-sm">تاريخ الحصول: 15 مارس 2025</p>
+                    </div>
+                    
+                    <!-- New Certificate - Cybersecurity Academy -->
+                    <div class="certificate-card rounded-xl p-6 cursor-pointer" onclick="showCertificateDetail('cert6')">
+                        <div class="mb-4 certificate-image-container">
+                            <img src="https://z-cdn-media.chatglm.cn/files/428276e3-5f63-42f8-a032-15531851eb79_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.jpg?auth_key=1791311692-7a850a242f6c4a16acc2198bd8aeec96-0-25b886db55c5c418df2e4d9c407ed740" 
+                                 alt="شهادة الأكاديمية الأمنية" 
+                                 class="certificate-image">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">الأكاديمية الأمنية</h3>
+                        <p class="text-gray-700 mb-2">دورة الأمن السيبراني</p>
+                        <p class="text-gray-600 text-sm">تاريخ الحصول: 2025</p>
                     </div>
                 </div>
             </div>
@@ -1296,7 +1485,7 @@
             web2: {
                 title: "مجلة إلكترونية تفاعلية",
                 image: "https://z-cdn-media.chatglm.cn/files/db642a0d-3fe3-48c6-8cfb-02be40c82c2d_%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D9%8A%D8%A8.jpg?auth_key=1790166701-a96321bb98734f57a4aace586880946f-0-35ff6cb029e81c12e3cac6ae0e454adf",
-                description: "تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهلة الاستخدام.",
+                description: "تصميم مجلة إلكترونية تفاعلية مع تجربة قراءة مبتكرة وسهولة الاستخدام.",
                 features: [
                     "تصميم جذاب مع تأثيرات بصرية",
                     "تجربة قراءة مريحة مع تمرير سلس",
@@ -1338,7 +1527,7 @@
         const certificateDetails = {
             cert0: {
                 title: "Elements of AI",
-                image: "https://z-cdn-media.chatglm.cn/files/ed7eb965-db0a-4740-9df8-fdcd1eb43baa_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.png?auth_key=1790504060-6082c50698f847aeaf2cfacbc45d2916-0-8e2604f1cb17d5576cc69e1460c201ab",
+                image: "https://z-cdn-media.chatglm.cn/files/d41d95bf-addc-43a2-8c12-c463d0175f21_a3012b74-b6b2-4cc2-a5a7-51eb41cbb020.jpg?auth_key=1791313872-124af9e7e6be45d9aba1b08d4fd8b1fb-0-f7b61fdd7282f0cb3a1a4d41b4f70686",
                 description: "CERTIFICATE OF COMPLETION",
                 details: "شهادة إتمام دورة Elements of AI، وهي دورة مقدمة في أساسيات الذكاء الاصطناعي من Minnalearn بالتعاون مع جامعة هلسنكي. تشمل الدورة مفاهيم أساسية في الذكاء الاصطناعي وتطبيقاته العملية.",
                 issuer: "Minnalearn and University of Helsinki",
@@ -1389,6 +1578,15 @@
                 issuer: "almentor",
                 date: "15 مارس 2025",
                 verification: "ID: px9mbqpk7"
+            },
+            cert6: {
+                title: "الأكاديمية الأمنية",
+                image: "https://z-cdn-media.chatglm.cn/files/428276e3-5f63-42f8-a032-15531851eb79_%D8%B4%D9%87%D8%A7%D8%AF%D8%A9.jpg?auth_key=1791311692-7a850a242f6c4a16acc2198bd8aeec96-0-25b886db55c5c418df2e4d9c407ed740",
+                description: "دورة الأمن السيبراني",
+                details: "شهادة إتمام دورة الأمن السيبراني من الأكاديمية الأمنية (مستوى البكالوريوس)، تشمل 60 ساعة من التدريب التقني و12 ساعة من التدريب على العمل الحر. صدرت بتاريخ 2025 وموقعة من مدير الأكاديمية ومدير NTI.",
+                issuer: "الأكاديمية الأمنية",
+                date: "2025",
+                verification: "الشهادة موقعة من مدير الأكاديمية ومدير NTI"
             }
         };
 
@@ -1424,23 +1622,39 @@
             const content = document.getElementById('certificateDetailContent');
             
             title.textContent = cert.title;
+            
+            // Enhanced certificate detail display
             content.innerHTML = `
-                <div class="mb-6">
-                    <img src="${cert.image}" alt="${cert.title}" class="w-full h-auto max-h-96 object-contain mx-auto rounded-lg shadow-lg">
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <p class="text-gray-700 mb-2"><strong>الجهة المانحة:</strong> ${cert.issuer}</p>
-                        <p class="text-gray-700 mb-2"><strong>عنوان الشهادة:</strong> ${cert.description}</p>
-                        <p class="text-gray-700 mb-2"><strong>تاريخ الحصول:</strong> ${cert.date}</p>
+                <div class="certificate-modal-content">
+                    <div class="mb-6 flex justify-center">
+                        <img src="${cert.image}" 
+                             alt="${cert.title}" 
+                             class="certificate-detail-image"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+CjxwYXRoIGQ9Ik0yMDAgNDBDMjAwIDQwIDIwMCAxNDAgMjAwIDI0MEMyMDAgMzQwIDEwMCAzNDAgMTAwIDI0MEMxMDAgMTQwIDIwMCA0MCAyMDAgNDAiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMzMzMzMzIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCI+U2VydGlmaWNhdGU8L3RleHQ+Cjwvc3ZnPg=='">
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-gray-700 mb-2"><strong>رقم التحقق:</strong> ${cert.verification}</p>
+                    <div class="certificate-info-grid">
+                        <div class="certificate-info-item">
+                            <div class="certificate-info-label">الجهة المانحة</div>
+                            <div class="certificate-info-value">${cert.issuer}</div>
+                        </div>
+                        <div class="certificate-info-item">
+                            <div class="certificate-info-label">عنوان الشهادة</div>
+                            <div class="certificate-info-value">${cert.description}</div>
+                        </div>
+                        <div class="certificate-info-item">
+                            <div class="certificate-info-label">تاريخ الحصول</div>
+                            <div class="certificate-info-value">${cert.date}</div>
+                        </div>
+                        <div class="certificate-info-item">
+                            <div class="certificate-info-label">رقم التحقق</div>
+                            <div class="certificate-info-value">${cert.verification}</div>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3">وصف الشهادة:</h3>
-                    <p class="text-gray-700">${cert.details}</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">وصف الشهادة</h3>
+                        <p class="text-gray-700 leading-relaxed">${cert.details}</p>
+                    </div>
                 </div>
             `;
             
@@ -1448,7 +1662,7 @@
         }
 
         // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Create success message
@@ -1486,7 +1700,9 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('header');
-            parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
         });
     </script>
 </body>
